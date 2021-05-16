@@ -1,0 +1,28 @@
+@import '../../_varibales.scss';
+
+.root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $third 0%, $yellow 100%);
+}
+
+.contentWrap {
+  display: flex;
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  margin-top: 128px;
+  width: 516px;
+
+  h3 {
+    margin-top: 32px;
+  }
+  button {
+    margin-top: 48px;
+  }
+}
+
+.cotentParallax {
+  margin-top: 67px;
+}

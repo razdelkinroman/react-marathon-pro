@@ -1,0 +1,53 @@
+@import '../../_varibales.scss';
+
+.button {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: none;
+  box-shadow: 0px -9px 0px 0px #0000002e inset;
+  border-radius: 11px;
+  outline: 0;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0em;
+  cursor: pointer;
+
+  &:active {
+    box-shadow: 0px -6px 0px 0px #0000002e inset;
+    padding-bottom: 6px;
+  }
+}
+
+.green {
+  background-color: $green;
+}
+.blue {
+  background-color: $blue;
+}
+.yellow {
+  background-color: $yellow;
+}
+
+.large {
+  height: 66px;
+  font-size: 23px;
+  font-family: Karla;
+  padding: 0 36px 9px 36px;
+}
+.middle {
+  height: 40px;
+  font-size: 17px;
+  font-family: Karla;
+  padding: 0 42px 9px 42px;
+}
+.small {
+  height: 17px;
+  font-size: 12px;
+  font-family: Roboto;
+  padding: 0 36px 2px 36px;
+  box-shadow: 0px -2px 0px 0px #0000002e inset;
+}
