@@ -1,0 +1,18 @@
+.root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 30.32%, #f5f5f5 100%);
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36px;
+}
+
+.pokemonList {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  grid-gap: 34px;
+  margin-top: 36px;
+}
