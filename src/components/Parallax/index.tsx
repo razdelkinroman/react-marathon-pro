@@ -19,7 +19,8 @@ const Parallax = () => {
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [x, y]);
+  }, []);
+
   return (
     <div className={s.root}>
       <div className={s.smallPokeBall} style={{ transform: `translate(${x * 0.05}px, ${y * 0.05}px )` }}>

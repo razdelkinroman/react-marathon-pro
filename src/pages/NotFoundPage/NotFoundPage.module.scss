@@ -1,0 +1,44 @@
+@import '../../_varibales.scss';
+
+.root {
+  min-height: 100vh;
+  background: $danger;
+}
+
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    margin-top: 31px;
+  }
+}
+
+.logoNotFound {
+  height: 623px;
+  width: 690px;
+  margin-top: 120px;
+  z-index: 2;
+}
+
+.textNotFound {
+  position: absolute;
+  font-family: Karla;
+  font-size: 700px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 818px;
+  letter-spacing: 4px;
+  color: #00000080;
+}
+
+.description {
+  font-family: Karla;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+}

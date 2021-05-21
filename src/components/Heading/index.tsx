@@ -17,11 +17,12 @@ type HeadingVariant = keyof typeof TagName;
 
 interface HeadingProps {
   variant: HeadingVariant;
+  className?: string;
 }
 
-const Heading: React.FC<HeadingProps> = ({ children, variant }) => {
+const Heading: React.FC<HeadingProps> = ({ children, variant, className }) => {
   const Tag = TagName[variant] || 'p';
-  const classes = cn(s.Heading, s[variant]);
+  const classes = cn(s.Heading, s[variant], className);
 
   return <Tag className={classes}>{children}</Tag>;
 };
