@@ -7,10 +7,6 @@ import Layout from '../../components/Layout';
 import pokemons from './data';
 import s from './PokemonPage.module.scss';
 
-// interface IEmptyPageProps {
-//   title?: string;
-// }
-
 const PokedexPage: React.FC = () => {
   return (
     <div className={s.root}>

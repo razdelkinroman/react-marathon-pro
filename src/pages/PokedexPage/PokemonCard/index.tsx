@@ -7,15 +7,23 @@ interface PookemonStats {
   defense: number;
 }
 
-interface Pokemon {
-  name: string;
-  stats: PookemonStats;
+interface IPokemon {
+  ['name_clean']: string;
+  abilities: string[];
   types: string[];
   img: string;
+  name: string;
+  ['base_experience']: number;
+  height: number;
+  id: number;
+  ['is_default']: boolean;
+  order: number;
+  weight: number;
+  stats: PookemonStats;
 }
 
 interface PokemonCardProps {
-  pokemon: Pokemon;
+  pokemon: IPokemon;
 }
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
@@ -40,9 +48,10 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
         </div>
         <div className={s.labelWrap}>
           {types.map((type: string) => (
-            <span className={s.label}>{type}</span>
+            <span key={s.label} className={s.label}>
+              {type}
+            </span>
           ))}
-          <span className={s.label}>Fire</span>
         </div>
       </div>
       <div className={s.pictureWrap}>
