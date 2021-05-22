@@ -7,7 +7,7 @@ interface PookemonStats {
   defense: number;
 }
 
-interface IPokemon {
+export interface IPokemon {
   ['name_clean']: string;
   abilities: string[];
   types: string[];
@@ -48,7 +48,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
         </div>
         <div className={s.labelWrap}>
           {types.map((type: string) => (
-            <span key={s.label} className={s.label}>
+            <span key={type} className={s.label}>
               {type}
             </span>
           ))}
