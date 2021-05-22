@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/Header';
 
 interface IEmptyPageProps {
   title?: string;
@@ -7,7 +6,6 @@ interface IEmptyPageProps {
 const EmptyPage: React.FC<IEmptyPageProps> = ({ title }) => {
   return (
     <div>
-      <Header />
       <div>{title}</div>
     </div>
   );

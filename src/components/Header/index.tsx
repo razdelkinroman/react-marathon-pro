@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import cn from 'classnames';
 import { A, usePath } from 'hookrouter';
 import { GENERAL_MENU } from '../../routes';
@@ -8,7 +8,6 @@ import s from './Header.module.scss';
 
 const Header = () => {
   const path = usePath();
-
   return (
     <div>
       <div className={s.root}>
@@ -27,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
