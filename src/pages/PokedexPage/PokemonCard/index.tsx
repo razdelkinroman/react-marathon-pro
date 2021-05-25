@@ -1,29 +1,11 @@
 import React from 'react';
 import Heading from '../../../components/Heading';
+
+import { PokemonsRequest } from '../Model';
 import s from './PokemonCard.module.scss';
 
-interface PookemonStats {
-  attack: number;
-  defense: number;
-}
-
-export interface IPokemon {
-  ['name_clean']: string;
-  abilities: string[];
-  types: string[];
-  img: string;
-  name: string;
-  ['base_experience']: number;
-  height: number;
-  id: number;
-  ['is_default']: boolean;
-  order: number;
-  weight: number;
-  stats: PookemonStats;
-}
-
 interface PokemonCardProps {
-  pokemon: IPokemon;
+  pokemon: PokemonsRequest;
 }
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
