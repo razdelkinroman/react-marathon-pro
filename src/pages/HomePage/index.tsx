@@ -1,6 +1,5 @@
 import React from 'react';
 import { navigate } from 'hookrouter';
-import Header from '../../components/Header';
 import Layout from '../../components/Layout';
 import Button from '../../components/Button';
 import Heading from '../../components/Heading';
@@ -11,7 +10,6 @@ import s from './HomePage.module.scss';
 const HomePage = () => {
   return (
     <div className={s.root}>
-      <Header />
       <Layout className={s.contentWrap}>
         <div className={s.contentText}>
           <Heading variant="title1">

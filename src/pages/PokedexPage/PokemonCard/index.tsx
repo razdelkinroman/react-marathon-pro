@@ -1,37 +1,23 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import { navigate } from 'hookrouter';
 import Heading from '../../../components/Heading';
+
+import { PokemonsRequest } from '../Model';
 import s from './PokemonCard.module.scss';
 
-interface PookemonStats {
-  attack: number;
-  defense: number;
-}
-
-interface IPokemon {
-  ['name_clean']: string;
-  abilities: string[];
-  types: string[];
-  img: string;
-  name: string;
-  ['base_experience']: number;
-  height: number;
-  id: number;
-  ['is_default']: boolean;
-  order: number;
-  weight: number;
-  stats: PookemonStats;
-}
-
 interface PokemonCardProps {
-  pokemon: IPokemon;
+  pokemon: PokemonsRequest;
 }
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
-  const { name, stats, types, img } = pokemon;
+  const { name, stats, types, img, id } = pokemon;
   const { attack, defense } = stats;
 
   return (
-    <div className={s.root}>
+    // <div className={s.root} onClick={() => navigate(`pokedex/${id}`)}>
+    <div className={s.root} onClick={() => navigate(`pokedex/${id}`)}>
       <div className={s.infoWrap}>
         <Heading variant="title4" className={s.titleName}>
           {name}
@@ -48,7 +34,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
         </div>
         <div className={s.labelWrap}>
           {types.map((type: string) => (
-            <span key={s.label} className={s.label}>
+            <span key={type} className={s.label}>
               {type}
             </span>
           ))}
