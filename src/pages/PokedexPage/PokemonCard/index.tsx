@@ -1,4 +1,7 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import { navigate } from 'hookrouter';
 import Heading from '../../../components/Heading';
 
 import { PokemonsRequest } from '../Model';
@@ -9,11 +12,12 @@ interface PokemonCardProps {
 }
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
-  const { name, stats, types, img } = pokemon;
+  const { name, stats, types, img, id } = pokemon;
   const { attack, defense } = stats;
 
   return (
-    <div className={s.root}>
+    // <div className={s.root} onClick={() => navigate(`pokedex/${id}`)}>
+    <div className={s.root} onClick={() => navigate(`pokedex/${id}`)}>
       <div className={s.infoWrap}>
         <Heading variant="title4" className={s.titleName}>
           {name}

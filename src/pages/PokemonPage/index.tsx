@@ -9,7 +9,7 @@ export interface PokemonProps {
 
 const Pokemon: React.FC<PokemonProps> = ({ id }) => {
   const { data, isLoading } = useData<PokemonsRequest>('getPokemons', { id });
-  console.log('data', data);
+
   if (isLoading) {
     return <Spinner />;
   }

@@ -8,7 +8,6 @@ function getUrlWithParamsConfig(endpointConfig: string, query: object) {
       ...query,
     },
   };
-  console.log('!!!!!!!!!', url);
   return url;
 }
 
